@@ -1,6 +1,19 @@
 # Python Classes
 
-This repository contains Python class exercises from **Holberton School**.  
-Each file corresponds to a task where a Python class is defined, sometimes empty, sometimes with attributes and methods.
+# Description:
 
-## Project Structure
+This folder contains exercises and examples related to Python
+classes and object-oriented programming (OOP). The goal is to
+practice defining classes, creating objects, and using class
+methods and attributes.
+
+### Topics Covered:
+
+- Defining basic classes
+- Creating objects (instances)
+- Instance attributes and methods
+- Class attributes and methods
+- Special methods (__init__, __str__, etc.)
+- Inheritance and method overriding (basic)
+- Encapsulation and private attributes (basic)
+
