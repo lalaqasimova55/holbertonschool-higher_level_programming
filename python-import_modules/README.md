@@ -1,3 +1,3 @@
 # Python - Import & Modules
 
-This directory contains tasks about Python import and modules.
+This repository contains Python projects for Holberton School.
