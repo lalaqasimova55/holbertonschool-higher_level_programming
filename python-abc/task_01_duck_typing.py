@@ -1,38 +1,34 @@
 #!/usr/bin/env python3
 from abc import ABC, abstractmethod
-import math
+from math import pi
+
 
 class Shape(ABC):
-    """
-    Abstract Base Class representing a geometric shape.
-    Enforces that subclasses implement area and perimeter methods.
-    """
+    """Abstract base class for shapes."""
 
     @abstractmethod
     def area(self):
-        """Calculate the area of the shape."""
-        pass
+        """Return area."""
+        raise NotImplementedError
 
     @abstractmethod
     def perimeter(self):
-        """Calculate the perimeter of the shape."""
-        pass
+        """Return perimeter."""
+        raise NotImplementedError
+
 
 class Circle(Shape):
-    """Concrete implementation of a Circle."""
-
     def __init__(self, radius):
         self.radius = radius
 
     def area(self):
-        return math.pi * (self.radius ** 2)
+        return pi * self.radius**2
 
     def perimeter(self):
-        return 2 * math.pi * self.radius
+        return 2 * pi * self.radius
+
 
 class Rectangle(Shape):
-    """Concrete implementation of a Rectangle."""
-
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -43,13 +39,8 @@ class Rectangle(Shape):
     def perimeter(self):
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
-    """
-    Prints the area and perimeter of a shape using duck typing.
-    
-    This function doesn't care if 'shape' is a Circle, Rectangle, 
-    or even a custom 'Triangle' class, as long as it has the 
-    required methods.
-    """
+    """Print shape info using duck typing."""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
