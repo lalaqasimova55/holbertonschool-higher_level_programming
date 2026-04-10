@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module that defines shapes using ABC and duck typing"""
+"""Shapes, Interfaces, and Duck Typing"""
 
 from abc import ABC, abstractmethod
 from math import pi
@@ -18,6 +18,8 @@ class Shape(ABC):
 
 
 class Circle(Shape):
+    """Circle shape."""
+
     def __init__(self, radius):
         self.radius = radius
 
@@ -29,6 +31,8 @@ class Circle(Shape):
 
 
 class Rectangle(Shape):
+    """Rectangle shape."""
+
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -41,6 +45,6 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Print shape info using duck typing."""
+    """Print area and perimeter using duck typing."""
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
